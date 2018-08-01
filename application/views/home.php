@@ -99,10 +99,17 @@
                                 foreach ($project as $proj):?>
                                 <tr>
                                     <td><?php echo $num; ?></td>
-                                    <td><?php echo $proj['title'];?></td>
+                                    <td>
+                                        <?php echo form_open('editProject')?>
+                                        <input type="text" name="title" value="<?php echo $proj['title'];?>" required hidden/>
+                                        <input type="submit" name="submit_title" value="<?php echo $proj['title'];?>" style="background-color: white; border: white;"/>
+                                        <?php echo form_close()?>
+                                    </td>
                                     <td><?php echo $proj['start_date'];?></td>
                                     <td><?php echo $proj['end_date'];?></td>
-                                    <td><?php echo $proj['status'];?></td>
+                                    <td><?php
+                                        echo $proj['status'];
+                                        ?></td>
                                     <td><?php echo $proj['organization'];?></td>
                                 </tr>
                             <?php

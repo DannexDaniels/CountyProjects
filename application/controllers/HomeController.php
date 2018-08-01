@@ -10,6 +10,7 @@ class HomeController extends CI_Controller
 {
     public function index(){
 
+        $this->session->set_userdata('page','others');
         //getting count of projects from the Model
         $data['counter'] = array(
             'running' => $this->projectModel->countProjects('running'),

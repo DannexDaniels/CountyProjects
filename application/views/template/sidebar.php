@@ -4,11 +4,11 @@
 
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
-                Creative Tim
+            <a href="#" class="simple-text">
+                <img src="<?php echo base_url('images')?>/katch_logo.jpg" width="200px" height="100px">
             </a>
         </div>
-
+        /
         <ul class="nav">
             <li>
                 <a href="<?php echo base_url();?>home">
@@ -28,7 +28,7 @@
                     <p>Supervisors</p>
                 </a>
             </li>
-            <li>
+            <!--<li>
                 <a href="typography.html">
                     <i class="pe-7s-news-paper"></i>
                     <p>Typography</p>
@@ -57,7 +57,7 @@
                     <i class="pe-7s-rocket"></i>
                     <p>Upgrade to PRO</p>
                 </a>
-            </li>
+            </li>-->
         </ul>
     </div>
 </div>
