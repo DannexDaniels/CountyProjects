@@ -2,6 +2,7 @@
     <div class="container-fluid">
         <?php foreach ($project as $proj):
             $amount = $this->projectModel->getProjectCost($proj['project_id']);
+
             ?>
             <div class="card">
                 <div class="header">
@@ -28,6 +29,8 @@
                             <thead>
                                 <td><h5 class="title">Number</h5></td>
                                 <td><h5 class="title">Title</h5></td>
+                                <td><h5 class="title">Time</h5></td>
+                                <td><h5 class="title">Cost</h5></td>
                                 <td><h5 class="title">Status</h5></td>
                                 <td><h5 class="title">Percentage</h5></td>
                             </thead>
@@ -43,6 +46,15 @@
                                             <input type="submit" name="submit_title" value="<?php echo $milestone['title'];?>" style="background-color: white; border: white;"/>
                                             <?php echo form_close()?>
                                         </td>
+                                        <td><?php
+                                            $diff_real = abs(strtotime($proj['end_date']) - strtotime($proj['start_date']));
+                                            $diff = $milestone['proportion']/100 * $diff_real;
+                                            $years = floor($diff / (365*60*60*24));
+                                            $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
+                                            $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+                                            printf ("%d years, %d months, %d days\n", $years, $months, $days);
+                                            ?></td>
+                                        <td><?php echo 'sh '.($milestone['proportion']/100 * $amount['amount']);?></td>
                                         <td><?php echo $milestone['status'];?></td>
                                         <td><?php echo $milestone['proportion'].'%';?></td>
                                     </tr>
