@@ -7,7 +7,7 @@
                         <h4 class="title">Not Started Projects</h4>
                     </div>
                     <div class="content">
-                        <a href="user.html">
+                        <a href="">
                             <h2><?php echo $counter['notStarted']; ?></h2>
                         </a>
                         <div class="footer">
@@ -32,7 +32,7 @@
                         <h4 class="title">Running Projects</h4>
                     </div>
                     <div class="content">
-                        <a href="user.html">
+                        <a href="">
                             <h2><?php echo $counter['running']; ?></h2>
                         </a>
                         <div class="footer">
@@ -57,7 +57,7 @@
                         <h4 class="title">Finished Projects</h4>
                     </div>
                     <div class="content">
-                        <a href="user.html">
+                        <a href="">
                             <h2><?php echo $counter['finished']; ?></h2>
                         </a>
                         <div class="footer">

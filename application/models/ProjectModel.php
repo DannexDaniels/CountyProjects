@@ -26,7 +26,7 @@ class ProjectModel extends CI_Model
         return $this->db->count_all('supervisor');
     }
 
-    function countMilestone(){
+    function countMilestone(){ 
         return $this->db->count_all('milestone');
     }
 
