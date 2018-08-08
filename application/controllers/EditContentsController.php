@@ -54,7 +54,7 @@ class EditContentsController extends CI_Controller
 
             //sending the data to the model
             $this->projectModel->updateProject($data,$this->input->post('title'));
-            //redirect('');
+            redirect(base_url(''));
         }else{
             $data['project'] = $this->projectModel->getSpecificProject($this->input->post('title'));
             print_r($data);
